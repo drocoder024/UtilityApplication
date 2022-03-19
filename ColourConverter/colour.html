@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>colour-converter</title>
+    <link href="colour.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+      <input type="text" id="hex" value="hex" autocomplete="false" />
+     <div id="rgb">
+        <input type="text" id="red" value="red" min="0" max="255" autocomplete="false" />
+        <input type="text" id="green" value="green" min="0" max="255" autocomplete="false" />
+        <input type="text" id="blue" value="blue" min="0" max="255" autocomplete="false" />
+
+     </div>
+     <input type="button" id="rgbToHex" value="RGBtoHex">
+    </div>
+
+    <script>
+      const hex = document.querySelector("#hex");
+      const red = document.querySelector("#red");
+      const green = document.querySelector("#green");
+      const blue = document.querySelector("#blue");
+
+     const button=document.querySelector("#rgbToHex");
+     button.addEventListener("click",()=>{
+         let R=red.value;
+         let G=green.value;
+         let B=blue.value;
+         const rgb = (R << 16) | (G << 8) | (B << 0);
+         hex.value='#' + (0x1000000 + rgb).toString(16).slice(1);
+         document.body.style.backgroundColor=hex.value;
+     })
+
+     hex.addEventListener("change",()=>{
+        let bigint = parseInt(hex.value, 16);
+    let r = (bigint >> 16) & 255;
+    let g = (bigint >> 8) & 255;
+    let b = bigint & 255;
+
+    red.value=r;
+    green.value=g;
+    blue.value=b;
+    document.body.style.backgroundColor=  ["rgb(",r,",",g,",",b,")"].join("");   
+});
+
+     
+    </script>
+  </body>
+</html>

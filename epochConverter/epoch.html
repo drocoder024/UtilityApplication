@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epoch-Converter</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="DateToEpoch">
+            <h2> Human Date to EpochDate</h2>
+            <hr><br>
+             <h3>Timestamp</h3>
+             <input id="inputdate" type="text" placeholder="Enter normal Date/time">
+    
+             <input type="button" id="convert_epoch" value="Convert">
+             <h3>Epoch Date</h3>
+             <input id="outputdate" type="text" placeholder="Enter Epoch Time" maxlength="12" disabled>
+            
+        </div>
+    
+        <div class="EpochToDate">
+            <h2>Timestamp to Human Date</h2>
+            <hr><br>
+             <h3>Timestamp</h3>
+             <input id="input" type="text" placeholder="Enter Epoch Time" maxlength="12">
+    
+             <input type="button" id="convert" value="Convert">
+             <h3>Human Date</h3>
+             <input id="output" type="text" placeholder="Enter Epoch Time" disabled>
+        </div>
+        
+    </div>
+    <script src="epoch.js"></script>
+</body>
+</html>

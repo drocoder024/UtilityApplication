@@ -1,0 +1,27 @@
+#container
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left:30%;
+    top:40%;
+    
+}
+
+#hex
+{
+    padding: 30px;
+    margin: 20px;
+    font-size: 20px;
+    
+}
+#red,#green,#blue
+{
+    padding: 20px;
+}
+#rgbToHex
+{
+    margin: 10px;
+}

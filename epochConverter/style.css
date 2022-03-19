@@ -1,0 +1,26 @@
+.container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.DateToEpoch,.EpochToDate
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px 20px;
+}
+#convert,#convert_epoch
+{
+    position: relative;
+    left:5px;
+    top:10px;
+    display: block;
+    margin: 20px;
+}
