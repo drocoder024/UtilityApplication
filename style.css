@@ -24,7 +24,7 @@
    display: flex;
    
 }
-#nav-a
+.nav-a
 {
    display: block;
     margin: 10px 0;
@@ -39,6 +39,12 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
 }
 
 
